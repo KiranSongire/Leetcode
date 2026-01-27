@@ -1,9 +1,12 @@
-# Write your MySQL query statement below
-select 
-patient_id,
-patient_name,
-conditions
-from
-Patients
-where 
-conditions LIKE '%DIAB1%'
+--“Write a query to calculate the total sales revenue for each product category over the last six months. 
+--Include only categories that have generated more than $10,000 in revenue.”
+
+
+columns, total_revenue = (count(products) * price ), product_category, date.
+
+select product_category, (count(products) * price) as total_revenue
+from company
+where created_date = CURRENT_DATE - INTERVAL '6 months'
+group by product_category
+HAVING total_revenue > 10000
+
