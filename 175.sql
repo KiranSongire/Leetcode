@@ -1,7 +1,7 @@
 --“Write a query to calculate the total sales revenue for each product category over the last six months. 
 --Include only categories that have generated more than $10,000 in revenue.”
 
-
+--1
 columns, total_revenue = (count(products) * price ), product_category, date.
 
 select product_category, (count(products) * price) as total_revenue
